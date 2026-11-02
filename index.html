@@ -310,8 +310,8 @@
       </div>
 
       <div class="button-area">
-        <button id="button-add-to-cart">Add to cart</button>
-        <button id="wishlist-button">
+        <button id="button-add-to-cart" onclick="addToCart()">Add to cart</button>
+        <button id="wishlist-button" onclick="addToWishlist()" >
           <img
             src="resources/heart.svg"
             alt="heart icon" width="24" height="24" />
@@ -327,5 +327,13 @@
     <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
   </footer>
 </body>
+<script>
+  function addToCart() {
+    alert("Product added to the cart.");
+  }
 
+  function addToWishlist() {
+    alert("Product added to the wishlist.");
+  }
+</script>
 </html>
