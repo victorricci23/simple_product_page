@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This is a example of a product page" />
+
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Shoe Product Page | devChallenges.io</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 20px 20px 0 20px;
+      font-family: Outfit;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      justify-items: center;
+    }
+
+    main picture img {
+      max-width: 708px;
+      max-height: 969px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 300;
+      color: #394150;
+    }
+
+    ul {
+      list-style: none;
+      line-height: 2;
+      padding-left: 10px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    li::before {
+      content: "•";
+      font-size: 15px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+
+    .buyer-area {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #breadcrumbs {
+      font-size: 14px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+    }
+
+
+    #current-page {
+      color: #394150;
+      font-weight: 300;
+    }
+
+    #apresentation {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    #apresentation p {
+      line-height: 1.5;
+    }
+
+    #hightlights {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .basic-info-area {
+      width: 100%;
+      background-color: #D2D5DA;
+      border-radius: 8px;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .basic-info-area div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 6px;
+    }
+
+    .basic-info-area p {
+      font-weight: 600;
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .button-area button {
+      width: 100%;
+      padding: 8px 32px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid #D2D5DA;
+    }
+
+
+    #wishlist-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      background-color: #FFFFFF;
+
+    }
+
+    #button-add-to-cart {
+      background-color: #652CD1;
+      color: #FFFFFF;
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+    }
+
+    #wishlist-button img {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .author-info {
+      padding-top: 20px;
+      font-size: 14px;
+      text-align: center;
+      margin-top: auto;
+      color: rgb(55, 65, 81);
+    }
+
+    .author-info a {
+      text-decoration: none;
+    }
+
+
+    @media (min-width: 1024px) {
+      body {
+        padding: 36px 36px 0 36px;
+      }
+
+      main {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+        justify-items: flex-end;
+        gap: 45px;
+        
+      }
+
+      main picture img {
+        max-height: 656px;
+        max-width: 472px;
+      }
+
+      .basic-info-area {
+        width: 100%;
+        max-width: 400px;
+      }
+  
+      .buyer-area {
+        gap: 35px
+      }
+
+      .button-area {
+        justify-content: flex-start;
+        gap: 20px;
+      }
+
+      .button-area button {
+        font-size: 14px;
+      }
+
+      #apresentation h1 {
+        width: 100%;
+        max-width: 380px;
+      }
+
+      #button-add-to-cart {
+        max-width: 150px;
+      }
+
+      #wishlist-button {
+        max-width: 200px;
+      }
+
+      #product-value {
+        font-size: 30px;
+      }
+
+    @media (min-width: 1280px) {
+      .buyer-area {
+        gap: 42px;
+      }
+    }
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <picture>
+      <source media="(min-width: 1024px)"
+        srcset="/home/victorricci/Documentos/programação/frontend/CHALLENGES/simple-product-page-challenge-starter/shoe-product-page-master/resources/shoe_image@2x.jpg" />
+      <img
+        src="/home/victorricci/Documentos/programação/frontend/CHALLENGES/simple-product-page-challenge-starter/shoe-product-page-master/resources/shoe_image@3x.jpg"
+        alt="pair of shoes" width="708" height="969" fetchpriority="high" />
+    </picture>
+    <div class="buyer-area">
+      <div id="breadcrumbs">
+        <p>Home</p>
+        <p>-</p>
+        <p>Products</p>
+        <p>-</p>
+        <p id="current-page">Sneakers</p>
+      </div>
+      <div id="apresentation">
+        <h1>Nike Air Zoom Pegasus 38 for Running Men</h1>
+        <p>
+          The Nike Air Zoom Pegasus 38 is a high-performance running shoe
+          designed for speed and agility. With its lightweight and responsive
+          midsole, this shoe provides a smooth ride and excellent cushioning.
+          The Pegasus 38 features a full-length Zoom Air unit for added bounce
+          and a more natural stride. The upper is made of a breathable mesh
+          material with a supportive Flyknit construction for a snug and
+          comfortable fit.
+        </p>
+      </div>
+      <div id="hightlights">
+        <h2>Hightlights:</h2>
+        <ul>
+          <li>Lightweight and Responsive Midsole.</li>
+          <li>Full-Length Zoom Air Unit.</li>
+          <li>Breathable Mesh Uppe.</li>
+        </ul>
+      </div>
+
+      <div class="basic-info-area">
+        <div>
+          <h3>COLOR</h3>
+          <p>Black</p>
+        </div>
+
+        <div>
+          <h3>SIZE</h3>
+          <p>42</p>
+        </div>
+
+        <div>
+          <p id="product-value">$59.00</p>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <div class="button-area">
+        <button id="button-add-to-cart">Add to cart</button>
+        <button id="wishlist-button">
+          <img
+            src="/home/victorricci/Documentos/programação/frontend/CHALLENGES/simple-product-page-challenge-starter/shoe-product-page-master/resources/heart.svg"
+            alt="heart icon" width="24" height="24" />
+          <p>Add to wishlist</p>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="author-info">
+    Coded by <a href="#">Your Name Here</a> | Challenge by
+    <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
+  </footer>
+</body>
+
+</html>
