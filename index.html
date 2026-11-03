@@ -30,12 +30,17 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 30px;
-      justify-items: center;
+      justify-items: stretch;
     }
 
+    main picture {
+      width: 100%;
+      max-width: none;
+    }
+    
     main picture img {
-      max-width: 708px;
-      max-height: 969px;
+      display: block;
+      width: 100%;
       height: auto;
       border-radius: 5px;
     }
@@ -75,7 +80,6 @@
 
     button {
       font-size: 16px;
-      font-family: Outfit;
     }
 
     .buyer-area {
@@ -198,7 +202,7 @@
       }
 
       main {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         align-items: start;
         justify-items: flex-end;
         gap: 45px;
@@ -230,7 +234,7 @@
 
       #apresentation h1 {
         width: 100%;
-        max-width: 380px;
+        max-width: 380px; 
       }
 
       #button-add-to-cart {
@@ -249,6 +253,10 @@
       .buyer-area {
         gap: 42px;
       }
+
+      main {
+        grid-template-columns: 1fr 1.4fr;
+      }
     }
 
     }
@@ -258,11 +266,16 @@
 <body>
   <main>
     <picture>
+      <source media="(min-width: 1280px)"
+        srcset="resources/shoe_image@3x.jpg" 
+        
+        />
       <source media="(min-width: 1024px)"
-        srcset="resources/shoe_image@2x.jpg" />
+        srcset="resources/shoe_image@2x.jpg" 
+        />
       <img
-        src="resources/shoe_image@3x.jpg"
-        alt="pair of shoes" width="708" height="969" fetchpriority="high" />
+        src="resources/shoe_image.jpg"
+        alt="pair of shoes"  width="236" height="323" fetchpriority="high" />
     </picture>
     <div class="buyer-area">
       <div id="breadcrumbs">
@@ -327,6 +340,7 @@
     <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
   </footer>
 </body>
+
 <script>
   function addToCart() {
     alert("Product added to the cart.");
@@ -336,4 +350,5 @@
     alert("Product added to the wishlist.");
   }
 </script>
+
 </html>
