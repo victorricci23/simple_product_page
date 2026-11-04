@@ -10,7 +10,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" 
+    rel="stylesheet"
+  >
 
   <title>Shoe Product Page | devChallenges.io</title>
 
@@ -127,6 +130,7 @@
       border-radius: 8px;
       padding: 12px 24px;
       display: flex;
+      /* justify-content: flex-start; */
       justify-content: flex-start;
       align-items: center;
       gap: 80px;
@@ -250,7 +254,8 @@
       #product-value {
         font-size: 30px;
       }
-
+    }
+  
     @media (min-width: 1280px) {
       .buyer-area {
         gap: 42px;
@@ -261,23 +266,23 @@
       }
     }
 
-    }
   </style>
 </head>
 
 <body>
   <main>
     <picture>
-      <source media="(min-width: 1280px)"
-        srcset="resources/shoe_image@3x.jpg" 
-        
-        />
-      <source media="(min-width: 1024px)"
-        srcset="resources/shoe_image@2x.jpg" 
-        />
-      <img
-        src="resources/shoe_image.jpg"
-        alt="pair of shoes"  width="236" height="323" fetchpriority="high" />
+      <img media="(min-width: 1280px)"
+        srcset="
+          resources/shoe_image@3x.jpg,
+          resources/shoe_image@2x.jpg,
+          resources/shoe_image.jpg
+        "
+        alt="Pair of Nike running shoes"  
+        width="236" 
+        height="323" 
+        fetchpriority="high" 
+      />
     </picture>
     <div class="buyer-area">
       <div id="breadcrumbs">
